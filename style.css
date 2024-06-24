@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --left-bg-color: rgba(203, 202, 248, 0.7);
+    --right-bg-color: rgba(43,43,43,0.8);
+    --left-btn-hover-color: rgba(28,122,28,1);
+    --right-btn-hover-color: rgba(87,84,236,1);
+
+    --hover-width: 75%;
+    --other-width: 25%;
+
+    --speed: 1000ms;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.split.left .btn:hover{
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover{
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left{
+    left: 0;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc3a4913-b6cf-4607-a29e-852c9b74a2f1/dgzxb1f-2d2a2cd2-823e-42e7-810f-44782583699e.jpg/v1/fill/w_1280,h_2294,q_75,strp/sukuna_itadori__by_xxxgrizzly1993_dgzxb1f-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI5NCIsInBhdGgiOiJcL2ZcL2JjM2E0OTEzLWI2Y2YtNDYwNy1hMjllLTg1MmM5Yjc0YTJmMVwvZGd6eGIxZi0yZDJhMmNkMi04MjNlLTQyZTctODEwZi00NDc4MjU4MzY5OWUuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.mDcs2mKd4ud-qYOiTFTfjsD8Fb4X50nwJX_ZvZR9L8Y');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--right-bg-color) ;
+}
+
+.split.right{
+    right: 0;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc3a4913-b6cf-4607-a29e-852c9b74a2f1/dgner5g-0b0e9ef3-d15c-48f7-bd93-60f6bd1a0d6a.jpg/v1/fill/w_1280,h_1500,q_75,strp/mahoraga_jujutsu_kaisen__by_xxxgrizzly1993_dgner5g-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMCIsInBhdGgiOiJcL2ZcL2JjM2E0OTEzLWI2Y2YtNDYwNy1hMjllLTg1MmM5Yjc0YTJmMVwvZGduZXI1Zy0wYjBlOWVmMy1kMTVjLTQ4ZjctYmQ5My02MGY2YmQxYTBkNmEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tka6qjdRzJvzl8z-XCm-Dgw8Lip7MMh9exPjdDGjiHc');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--left-bg-color) ;
+}
+
+/* Creando el efecto*/
+
+.split.right, 
+.split.left,
+.split.right::before,
+.split.left::before{
+    transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+
+@media(max-width: 800px){
+    h1{
+        font-size: 2rem;
+        top:30%;
+    }
+
+    .btn{
+        padding: 1.2rem;
+        width: 12rem;
+    }
+}
