@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --left-bg-color: rgba(203, 202, 248, 0.7);
+    --left-bg-color: rgba(233, 232, 250, 0.4);
     --right-bg-color: rgba(43,43,43,0.8);
-    --left-btn-hover-color: rgba(28,122,28,1);
-    --right-btn-hover-color: rgba(87,84,236,1);
+    --left-btn-hover-color: rgba(28,122,28,0.8);
+    --right-btn-hover-color: rgb(155, 15, 15, 0.8);
 
     --hover-width: 75%;
     --other-width: 25%;
@@ -22,10 +22,9 @@ body {
     overflow: hidden;
     margin: 0;
 }
-
-h1{
+.left h1{
     font-size: 4rem;
-    color: #fff;
+    color: rgb(255, 255, 255, 0.8);
     position: absolute;
     left: 50%;
     top: 20%;
@@ -33,7 +32,17 @@ h1{
     white-space: nowrap;
 }
 
-.btn{
+.right h1{
+    font-size: 4rem;
+    color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.left .btn {
     position: absolute;
     display: flex;
     align-items: center;
@@ -44,6 +53,24 @@ h1{
     text-decoration: none;
     color: #fff;
     border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.right .btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0) solid 0.2rem;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -92,7 +119,9 @@ h1{
 
 .split.right{
     right: 0;
-    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc3a4913-b6cf-4607-a29e-852c9b74a2f1/dgner5g-0b0e9ef3-d15c-48f7-bd93-60f6bd1a0d6a.jpg/v1/fill/w_1280,h_1500,q_75,strp/mahoraga_jujutsu_kaisen__by_xxxgrizzly1993_dgner5g-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMCIsInBhdGgiOiJcL2ZcL2JjM2E0OTEzLWI2Y2YtNDYwNy1hMjllLTg1MmM5Yjc0YTJmMVwvZGduZXI1Zy0wYjBlOWVmMy1kMTVjLTQ4ZjctYmQ5My02MGY2YmQxYTBkNmEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tka6qjdRzJvzl8z-XCm-Dgw8Lip7MMh9exPjdDGjiHc');
+    /*background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc3a4913-b6cf-4607-a29e-852c9b74a2f1/dgner5g-0b0e9ef3-d15c-48f7-bd93-60f6bd1a0d6a.jpg/v1/fill/w_1280,h_1500,q_75,strp/mahoraga_jujutsu_kaisen__by_xxxgrizzly1993_dgner5g-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTUwMCIsInBhdGgiOiJcL2ZcL2JjM2E0OTEzLWI2Y2YtNDYwNy1hMjllLTg1MmM5Yjc0YTJmMVwvZGduZXI1Zy0wYjBlOWVmMy1kMTVjLTQ4ZjctYmQ5My02MGY2YmQxYTBkNmEuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tka6qjdRzJvzl8z-XCm-Dgw8Lip7MMh9exPjdDGjiHc');
+    */
+    background: url('https://images-ng.pixai.art/images/orig/7e4aa989-88b1-4e6f-9ca4-c211195f1c1a');
     background-repeat: no-repeat;
     background-size: cover;
 }
